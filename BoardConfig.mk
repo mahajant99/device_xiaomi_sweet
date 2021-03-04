@@ -7,7 +7,7 @@
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
-DEVICE_PATH := device/xiaomi/surya
+DEVICE_PATH := device/xiaomi/sweet
 
 # Architecture
 TARGET_ARCH := arm64
@@ -26,7 +26,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a76
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := surya,karna
+TARGET_OTA_ASSERT_DEVICE := sweet
 TARGET_NO_BOOTLOADER := true
 
 # Bootloader
@@ -73,10 +73,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
-TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
-
 # Kernel
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -90,9 +86,9 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x8800
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := surya_defconfig
+TARGET_KERNEL_CONFIG := sweet_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sweet
 
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
@@ -182,4 +178,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
--include vendor/xiaomi/surya/BoardConfigVendor.mk
+-include vendor/xiaomi/sweet/BoardConfigVendor.mk

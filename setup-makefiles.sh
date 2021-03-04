@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=surya
+DEVICE=sweet
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2020

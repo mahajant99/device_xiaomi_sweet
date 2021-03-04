@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/surya/surya-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/sweet/sweet-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -113,7 +113,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_surya
+    android.hardware.light@2.0-service.xiaomi_sweet
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -144,7 +144,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.surya
+    android.hardware.power@1.2-service.sweet
 
 # RCS
 PRODUCT_PACKAGES += \

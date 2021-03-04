@@ -1,14 +1,8 @@
 [
     {
         "remote":       "github",
-        "repository":   "mahajant99/vendor_xiaomi_surya",
-        "target_path":  "vendor/xiaomi/surya",
-        "branch":     "eleven"
-    },
-    {
-        "remote":       "github",
-        "repository":   "mahajant99/kernel_xiaomi_surya",
-        "target_path":  "kernel/xiaomi/surya",
+        "repository":   "mahajant99/vendor_xiaomi_sweet",
+        "target_path":  "vendor/xiaomi/sweet",
         "branch":     "eleven"
     },
     {

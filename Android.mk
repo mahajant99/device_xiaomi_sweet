@@ -15,7 +15,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),surya)
+ifeq ($(TARGET_DEVICE),sweet)
 include $(CLEAR_VARS)
 LOCAL_SHARED_LIBRARIES := libhidltransport
 LOCAL_MODULE := android.hidl.base@1.0

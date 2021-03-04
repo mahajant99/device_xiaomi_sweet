@@ -36,7 +36,7 @@ ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
     LOCAL_CFLAGS += -DINTERACTION_BOOST
 endif
 
-LOCAL_MODULE := android.hardware.power@1.2-service.surya
+LOCAL_MODULE := android.hardware.power@1.2-service.sweet
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_STEM := android.hardware.power@1.2-service
