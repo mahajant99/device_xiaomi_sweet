@@ -1,10 +1,9 @@
-/*
- * Copyright (c) 2012, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * *    * Redistributions of source code must retain the above copyright
+ *     * Redistributions of source code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
  *     * Redistributions in binary form must reproduce the above
  *       copyright notice, this list of conditions and the following
@@ -25,23 +24,25 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
  */
 
-#include "hint-data.h"
+#ifndef __POWERHINTPARSER__
+#define __POWERHINTPARSER__
 
-int hint_compare(struct hint_data *first_hint,
-        struct hint_data *other_hint) {
-    if (first_hint == other_hint) {
-        return 0;
-    } else if ((first_hint && other_hint) &&
-            (first_hint->hint_id == other_hint->hint_id)) {
-        return 0;
-    } else {
-        return 1;
-    }
-}
+#define POWERHINT_XML      "/vendor/etc/powerhint.xml"
+#define MAX_HINT 6
+#define MAX_PARAM 30
 
-void hint_dump(struct hint_data *hint)
-{
-    /*ALOGI("hint_id: %lu", hint->hint_id);*/
-}
+typedef struct perflock_param_t {
+    int type;
+    int numParams;
+    int paramList[MAX_PARAM];//static limit on number of hints - 15
+}perflock_param_t;
+
+static perflock_param_t powerhint[MAX_HINT];
+
+int parsePowerhintXML();
+int *getPowerhint(int, int*);
+
+#endif /* __POWERHINTPARSER__ */

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2013, 2018 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -26,22 +26,25 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+#define NODE_MAX (64)
 
-#include "hint-data.h"
+#define SCALING_GOVERNOR_PATH "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
+#define DCVS_CPU0_SLACK_MAX_NODE "/sys/module/msm_dcvs/cores/cpu0/slack_time_max_us"
+#define DCVS_CPU0_SLACK_MIN_NODE "/sys/module/msm_dcvs/cores/cpu0/slack_time_min_us"
+#define MPDECISION_SLACK_MAX_NODE "/sys/module/msm_mpdecision/slack_time_max_us"
+#define MPDECISION_SLACK_MIN_NODE "/sys/module/msm_mpdecision/slack_time_min_us"
+#define SCALING_MIN_FREQ "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
+#define ONDEMAND_GOVERNOR "ondemand"
+#define INTERACTIVE_GOVERNOR "interactive"
+#define MSMDCVS_GOVERNOR "msm-dcvs"
+#define SCHEDUTIL_GOVERNOR "schedutil"
 
-int hint_compare(struct hint_data *first_hint,
-        struct hint_data *other_hint) {
-    if (first_hint == other_hint) {
-        return 0;
-    } else if ((first_hint && other_hint) &&
-            (first_hint->hint_id == other_hint->hint_id)) {
-        return 0;
-    } else {
-        return 1;
-    }
-}
+#define HINT_HANDLED (0)
+#define HINT_NONE (-1)
 
-void hint_dump(struct hint_data *hint)
-{
-    /*ALOGI("hint_id: %lu", hint->hint_id);*/
-}
+enum CPU_GOV_CHECK {
+    CPU0 = 0,
+    CPU1 = 1,
+    CPU2 = 2,
+    CPU3 = 3
+};

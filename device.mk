@@ -161,7 +161,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.sweet
+    android.hardware.power-service.sweet
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
