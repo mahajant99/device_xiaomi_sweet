@@ -121,7 +121,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sweet
+    android.hardware.lights-service.qti-sweet
 
 # Media
 PRODUCT_PACKAGES += \
