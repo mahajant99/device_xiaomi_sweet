@@ -37,21 +37,10 @@ system_ext/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Bluetooth
 system_ext/bin/bt_logger
-system_ext/etc/bluetooth/bt_configstore.conf
 system_ext/etc/bluetooth/bt_profile.conf
 system_ext/etc/bluetooth/interop_database.conf
-system_ext/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
-system_ext/lib/libbluetooth_qti.so
 system_ext/lib/libbt-logClient.so
-system_ext/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
-system_ext/lib/vendor.qti.hardware.btconfigstore@1.0.so
-system_ext/lib/vendor.qti.hardware.btconfigstore@2.0.so
-system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
-system_ext/lib64/libbluetooth_qti.so
 system_ext/lib64/libbt-logClient.so
-system_ext/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so
-system_ext/lib64/vendor.qti.hardware.btconfigstore@1.0.so
-system_ext/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 
 # Camera
 system_ext/etc/qvr/cfg/339/0/65536/mtp855.txt
@@ -83,8 +72,6 @@ system_ext/lib/libqvr_eyetracking_plugin.so
 system_ext/lib/libseccam-ipc.so
 system_ext/lib/libseccam.so
 system_ext/lib/libseccamservice.so
-system_ext/lib/vendor.qti.hardware.camera.device@1.0.so
-system_ext/lib/vendor.qti.hardware.camera.device@2.0.so
 system_ext/lib/vendor.qti.hardware.camera.device@3.5.so
 system_ext/lib/vendor.qti.hardware.cvp@1.0-adapter-helper.so
 system_ext/lib/vendor.qti.hardware.cvp@1.0.so
@@ -161,8 +148,6 @@ system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so
 
 # Configstore
 -system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar
-system_ext/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
-system_ext/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 
 # Display
 system_ext/lib/libOpenCL_system.so

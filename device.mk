@@ -49,15 +49,27 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti \
-    libbtconfigstore
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
+
+PRODUCT_PACKAGES += \
+    libbluetooth_qti \
+    libbtconfigstore \
+    bt_configstore.conf
 
 # Camera
 PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.camera.device@1.0
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@2.0
+
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0
 
 # Cryptfs
 PRODUCT_PACKAGES += \
@@ -188,7 +200,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    telephony-ext \
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
