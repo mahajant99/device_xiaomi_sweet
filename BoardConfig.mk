@@ -9,6 +9,10 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 DEVICE_PATH := device/xiaomi/sweet
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := sm6150
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -27,11 +31,10 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sweet
-TARGET_NO_BOOTLOADER := true
 
 # Bootloader
-TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
+TARGET_NO_BOOTLOADER := true
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -117,7 +120,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 BUILD_WITHOUT_VENDOR := true
 BOARD_USES_PRODUCTIMAGE := true
 BOARD_USES_METADATA_PARTITION := true
-BOARD_USES_QCOM_HARDWARE := true
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
@@ -163,9 +165,6 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event1"
 
-# Treble
-BOARD_VNDK_VERSION := current
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
@@ -179,6 +178,9 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
+# VNDK
+BOARD_VNDK_VERSION := current
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/sweet/BoardConfigVendor.mk
