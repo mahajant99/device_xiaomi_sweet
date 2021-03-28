@@ -56,4 +56,3 @@ odm                                                     /odm                    
 /dev/block/bootdevice/by-name/misc                      /misc              emmc    defaults                                             defaults
 /dev/block/zram0                                        none               swap    defaults                                             zramsize=1073741824
 /dev/block/bootdevice/by-name/boot                      /boot                  emmc    defaults                                             defaults
-
