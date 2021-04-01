@@ -61,10 +61,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.ims.disableIMSLogs=1 \
     persist.vendor.ims.disableQXDMLogs=1
 
-# Priv-app permission
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.control_privapp_permissions=log
-
 # WFD
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.enable_hwc_vds=1 \
