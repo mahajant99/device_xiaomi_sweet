@@ -1,5 +1,14 @@
+on post-fs
+    mount none /dev/null /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service bind
+    mount none /dev/null /vendor/etc/step_motor/mi_camera_config.xml bind
+    mount none /dev/null /vendor/lib64/hw/vendor.xiaomi.hardware.motor@1.0-impl.so bind
+    mount none /dev/null /vendor/lib64/libmivendor_module_calibration.so bind
+    mount none /dev/null /vendor/lib64/libmivendor_module_hall.so bind
+    mount none /dev/null /vendor/lib64/libmivendor_module_motor.so bind
+    mount none /dev/null /vendor/lib64/mi.motor.daemon.so bind
+
 on property:ro.boot.hwc=*
-    setprop vendor.boot.hwc ${ro.boot.hwc}   
+    setprop vendor.boot.hwc ${ro.boot.hwc}
 
 on property:init.svc.vendor.cnss_diag=running
     stop vendor.cnss_diag
