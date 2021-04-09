@@ -30,7 +30,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a76
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := sweet
+TARGET_OTA_ASSERT_DEVICE := sweet,sweetin,sweetinpro
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
@@ -75,6 +75,10 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
+
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_sweet
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sweet
 
 # Kernel
 BOARD_RAMDISK_OFFSET := 0x01000000
