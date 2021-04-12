@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018,2020 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,8 @@ package org.lineageos.settings.dirac;
 import android.content.Context;
 import android.content.Intent;
 import android.os.UserHandle;
+import android.media.AudioManager;
+
 
 public final class DiracUtils {
 
@@ -28,9 +30,9 @@ public final class DiracUtils {
 
     public static void initialize(Context context) {
         if (!mInitialized) {
+            mInitialized = true;
             mContext = context;
             mDiracSound = new DiracSound(0, 0);
-            mInitialized = true;
         }
     }
 
@@ -39,7 +41,7 @@ public final class DiracUtils {
     }
 
     protected static boolean isDiracEnabled() {
-        return mDiracSound != null && mDiracSound.getMusic() == 1;
+        return mDiracSound.getMusic() == 1;
     }
 
     protected static void setLevel(String preset) {
@@ -52,5 +54,16 @@ public final class DiracUtils {
 
     protected static void setHeadsetType(int paramInt) {
          mDiracSound.setHeadsetType(paramInt);
+    }
+
+    protected static void setHifiMode(int paramInt) {
+         AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+         audioManager.setParameters("hifi_mode=" + (paramInt == 1 ? true : false));
+         mDiracSound.setHifiMode(paramInt);
+    }
+
+    protected static boolean getHifiMode() {
+         AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+         return audioManager.getParameters("hifi_mode").contains("true");
     }
 }
