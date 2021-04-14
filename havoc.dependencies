@@ -7,6 +7,12 @@
     },
     {
         "remote":       "github",
+        "repository":   "mahajant99/kernel_xiaomi_sweet",
+        "target_path":  "kernel/xiaomi/sweet",
+        "branch":     "eleven"
+    },
+    {
+        "remote":       "github",
         "repository":   "LineageOS/android_packages_resources_devicesettings",
         "target_path":  "packages/resources/devicesettings",
         "branch":     "lineage-18.1"

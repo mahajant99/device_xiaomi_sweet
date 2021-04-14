@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_sweet.mk
+    $(LOCAL_DIR)/havoc_sweet.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_sweet-user \
-    lineage_sweet-userdebug \
-    lineage_sweet-eng
+    havoc_sweet-user \
+    havoc_sweet-userdebug \
+    havoc_sweet-eng
